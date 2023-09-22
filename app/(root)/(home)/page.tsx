@@ -1,6 +1,9 @@
 import Filters from "@/components/Filters";
+import ResourceCard from "@/components/ResourceCard";
 import SearchForm from "@/components/SearchForm";
 import { getResources } from "@/sanity/actions";
+
+export const revalidate = 900;
 
 const Page = async () => {
   const resources = await getResources({
@@ -21,6 +24,16 @@ const Page = async () => {
       </section>
 
       <Filters />
+
+      <section className="flex-center mt-6 w-full flex-col sm:mt-20">
+        Header
+
+        <div className="mt-12 flex w-full flex-wrap justify-center gap-16 sm:justify-start">
+          {resources?.length > 0 ? resources.map((resource: any) => (
+            <ResourceCard key={resource._id} id={resource._id} title={resource.title} image={resource.image} downloadNumber={resource.views} />
+          )) : <p className="body-regular text-white-400"> Resources not found</p>}
+        </div>
+      </section>
     </main>
   );
 };
