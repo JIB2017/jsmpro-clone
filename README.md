@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Javascript Mastery Pro Clone
 
-## Getting Started
+<img src="https://github.com/JIB2017/jsmpro-clone/assets/31837873/80154f2c-4a3f-4140-8ee4-81d89c42d009" alt="jsm pro" width="900px" height="550px" />
 
-First, run the development server:
+### Un excelente clon del sitio web de Javascript Mastery Pro.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<div style="display: flex; justify-content: center; align-items: center; margin: "20px";">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="tailwind" width="40px" height="40px" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="typescript" width="40px" height="40px" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="react" width="40px" height="40px" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="next" width="40px" height="40px" />
+  <img src="https://github.com/JIB2017/jsmpro-clone/assets/31837873/f55a8c0b-ef49-40e4-9ea1-8f932361f707" alt="sanity" width="50px" height="50px" />
+</div>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Como se hizo:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **UI/UX:** Manteniendo una UI limpia usando Shadcn UI y Tailwind CSS.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. **Headless CMS:** Se utiliza Sanity como CMS para almacenar los diferentes productos.
 
-## Learn More
+3. **Tecnologías:** HTML, Tailwind CSS, Typescript, React, Next, Sanity y shadcn-ui.
 
-To learn more about Next.js, take a look at the following resources:
+4. **SSR:** La mayor parte de la app se renderiza del lado del servidor favoreciendo una velocidad de carga superior al renderizado del lado del cliente.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Lo aprendido:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Typescript:** Javascript fuertemente tipado y mas fácil de debugear.
 
-## Deploy on Vercel
+**Sanity CMS:** Una plataforma de contenido integrado a la app con Next y usando Groq, su propio lenguaje de consultas.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Tailwind CSS:** Con este framework de CSS realizé un código mas limpio y reducí el tiempo de desarrollo de la UI en comparación con CSS.
