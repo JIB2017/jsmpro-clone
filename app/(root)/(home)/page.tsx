@@ -11,15 +11,15 @@ interface Props {
 };
 
 const Page = async ({searchParams}: Props) => {
-  //console.log(searchParams);
+  console.log(searchParams.query);
   
   const resources = await getResources({
-    query: "",
+    query: searchParams?.query || "",
     category: searchParams?.category || "",
     page: "1",
   });
 
-  console.log(resources);
+  // console.log(resources);
   
   return (
     <main className="flex-center flex-col paddings mx-auto w-full max-w-screen-2xl">
@@ -32,16 +32,19 @@ const Page = async ({searchParams}: Props) => {
 
       <Filters />
 
-      <section className="flex-center mt-6 w-full flex-col sm:mt-20">
-        <Header></Header>
+      { (searchParams?.query || searchParams?.category) && (
+        <section className="flex-center mt-6 w-full flex-col sm:mt-20">
+          <Header type="Resources" query={searchParams.query || ''} category={searchParams.category || ''} />
 
-        {/* Here are all the cards */}
-        <div className="mt-12 flex w-full flex-wrap justify-center gap-16 sm:justify-start">
-          {resources?.length > 0 ? resources.map((resource: any) => (
-            <ResourceCard key={resource._id} id={resource._id} title={resource.title} image={resource.image} downloadNumber={resource.views} />
-          )) : <p className="body-regular text-white-400"> Resources not found</p>}
-        </div>
-      </section>
+          {/* Here are all the cards */}
+          <div className="mt-12 flex w-full flex-wrap justify-center gap-16 sm:justify-start">
+            {resources?.length > 0 ? resources.map((resource: any) => (
+              <ResourceCard key={resource._id} id={resource._id} title={resource.title} image={resource.image} downloadNumber={resource.views} />
+            )) : <p className="body-regular text-white-400"> Resources not found</p>}
+          </div>
+        </section>
+
+      )}
     </main>
   );
 };

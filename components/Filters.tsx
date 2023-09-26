@@ -13,14 +13,12 @@ const Filters = () => {
 
   const handleFilter = (link: string) => {
     let newUrl = "";
-    console.log(link);
 
     if (active === link) {
       setActive("");
       newUrl = formUrlQuery({
         params: searchParams.toString(),
-        key: "category",
-        value: null,
+        keysToRemove: ["category"],
       });
     } else {
       setActive(link);
